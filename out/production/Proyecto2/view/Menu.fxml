@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="702.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Menu">
+    <children>
+        <MenuBar layoutX="204.0" layoutY="11.0" prefHeight="30.0" prefWidth="311.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="CLIENTES">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#mostrarCliente" text="Altas y bajas" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="PRODUCTOS">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Altas y bajas" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="ORDENES DE COMPRA">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Altas y bajas" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+
+        <Pane fx:id="paneCliente" layoutX="1.0" layoutY="84.0" prefHeight="619.0" prefWidth="709.0" visible="false">
+        <Label layoutX="62.0" layoutY="106.0" text="Nombre:" />
+        <TextField fx:id="txtNombreCliente" layoutX="166.0" layoutY="102.0" prefHeight="25.0" prefWidth="185.0" />
+        <Button layoutX="526.0" layoutY="94.0" mnemonicParsing="false" onAction="#addCliente" prefHeight="25.0" prefWidth="98.0" text="AGREGAR" textFill="#393434" />
+        <Button layoutX="526.0" layoutY="130.0" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="98.0" text="ELIMINAR" />
+        <TableView fx:id="tblClientes" layoutX="35.0" layoutY="277.0" onMouseClicked="#seleccionar" prefHeight="285.0" prefWidth="640.0">
+            <columns>
+                <TableColumn fx:id="tfId" prefWidth="41.0" text="ID" />
+                <TableColumn fx:id="tfNombreCliente" prefWidth="121.0" text="NOMBRE" />
+                <TableColumn fx:id="tfApellido" prefWidth="106.0" text="APELLIDO" />
+                <TableColumn fx:id="tfCorreo" prefWidth="131.0" text="CORREO " />
+                <TableColumn fx:id="tfTelefono" prefWidth="97.0" text="TELEFONO" />
+                <TableColumn fx:id="tfRepuesto" prefWidth="143.0" text="REPUESTO" />
+            </columns>
+        </TableView>
+        <Button layoutX="526.0" layoutY="164.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="98.0" text="SALIR" />
+        <Label layoutX="62.0" layoutY="142.0" text="Apellido:" />
+        <Label layoutX="60.0" layoutY="176.0" text="Correo Electronico" />
+        <Label layoutX="61.0" layoutY="208.0" text="Telefono:" />
+        <Label layoutX="61.0" layoutY="240.0" text="Repuesto" />
+        <TextField fx:id="txtApellido" layoutX="166.0" layoutY="138.0" prefHeight="25.0" prefWidth="185.0" />
+        <TextField fx:id="txtCorreo" layoutX="166.0" layoutY="172.0" prefHeight="25.0" prefWidth="185.0" />
+        <TextField fx:id="txtTelefono" layoutX="166.0" layoutY="204.0" prefHeight="25.0" prefWidth="185.0" />
+        <TextField fx:id="txtRepuesto" layoutX="166.0" layoutY="236.0" prefHeight="25.0" prefWidth="185.0" />
+         <MenuButton layoutX="48.0" layoutY="56.0" mnemonicParsing="false" text="Tipo de cliente">
+           <items>
+             <MenuItem mnemonicParsing="false" text="Individual" />
+             <MenuItem mnemonicParsing="false" text="Empresa" />
+           </items>
+         </MenuButton>
+         <Label layoutX="310.0" layoutY="14.0" text="CLIENTES" textFill="#756666">
+            <font>
+               <Font name="System Bold" size="20.0" />
+            </font>
+         </Label>
+        </Pane>
+    </children>
+</Pane>
