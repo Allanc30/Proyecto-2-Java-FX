@@ -4,25 +4,26 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane prefHeight="496.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductosManejo">
+<Pane prefHeight="545.0" prefWidth="612.0" style="-fx-background-color: #C0C0C0;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductosManejo">
    <children>
       <Label layoutX="189.0" layoutY="54.0" prefHeight="30.0" prefWidth="233.0" text="Productos Auto Partes" textFill="#756666">
          <font>
             <Font name="System Bold" size="20.0" />
          </font></Label>
-      <TableView fx:id="tblProductos" layoutX="45.0" layoutY="231.0" prefHeight="200.0" prefWidth="533.0">
+      <TableView fx:id="tblProductos" layoutX="45.0" layoutY="262.0" prefHeight="240.0" prefWidth="533.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="ID" />
-          <TableColumn prefWidth="326.0" text="PRODUCTO" />
-            <TableColumn prefWidth="131.0" text="PRECIO UNITARIO" />
+          <TableColumn fx:id="tfId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tfProducto" prefWidth="326.0" text="PRODUCTO" />
+            <TableColumn fx:id="tfPrecio" prefWidth="131.0" text="PRECIO UNITARIO" />
         </columns>
       </TableView>
       <Label layoutX="45.0" layoutY="119.0" text="Nombre producto" />
       <Label layoutX="45.0" layoutY="159.0" text="Precio Unitario" />
-      <TextField fx:id="txtNombreProducto" layoutX="163.0" layoutY="115.0" />
-      <TextField fx:id="txtPrecioUnitario" layoutX="163.0" layoutY="155.0" />
-      <Button layoutX="415.0" layoutY="107.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="AGREGAR" />
-      <Button layoutX="415.0" layoutY="143.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="ELIMINAR" />
-      <Button layoutX="415.0" layoutY="180.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="SALIR" />
+      <TextField fx:id="txtNombreProducto" layoutX="163.0" layoutY="115.0" prefHeight="25.0" prefWidth="219.0" />
+      <TextField fx:id="txtPrecioUnitario" layoutX="163.0" layoutY="155.0" prefHeight="25.0" prefWidth="219.0" />
+      <Button layoutX="441.0" layoutY="107.0" mnemonicParsing="false" onAction="#addProducto" prefHeight="25.0" prefWidth="110.0" text="AGREGAR" />
+      <Button layoutX="441.0" layoutY="143.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="ELIMINAR" />
+      <Button layoutX="441.0" layoutY="217.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="110.0" text="SALIR" />
+      <Button layoutX="441.0" layoutY="180.0" mnemonicParsing="false" onAction="#retornarMenu" text="MENU PRINCIPAL" />
    </children>
 </Pane>

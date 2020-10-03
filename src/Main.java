@@ -5,6 +5,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /**
+ * @author Keillie Sicaja y Allan Castillo
  * Clase Main para darle inicio al sistema
  */
 public class Main extends Application {
